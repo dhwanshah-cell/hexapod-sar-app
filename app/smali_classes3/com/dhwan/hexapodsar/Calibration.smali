@@ -796,7 +796,7 @@
 
     new-array v3, v2, [Ljava/lang/Integer;
 
-    const/16 v7, -0x78
+    const/16 v7, 0x0
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -804,7 +804,7 @@
 
     aput-object v7, v3, v4
 
-    const/16 v7, -0xc8
+    const/16 v7, 0x0
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -832,7 +832,7 @@
 
     aput-object v5, v3, v4
 
-    const/16 v6, -0x6e
+    const/16 v6, 0x0
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -840,7 +840,7 @@
 
     aput-object v6, v3, v8
 
-    const/16 v6, 0x78
+    const/16 v6, 0x0
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -862,7 +862,7 @@
 
     aput-object v5, v3, v4
 
-    const/16 v6, -0xd2
+    const/16 v6, 0x0
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -884,7 +884,7 @@
 
     new-array v3, v2, [Ljava/lang/Integer;
 
-    const/16 v6, 0x6e
+    const/16 v6, 0x0
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

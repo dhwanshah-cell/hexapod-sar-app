@@ -30,6 +30,9 @@ Edits go straight into `app/`, and the build packs it back up.
   stride ahead, instead of from the standing spot to a full stride ahead. Same 60 mm stride
   and speed; the largest coxa swing drops from 30° to 15° and tibia from 43° to 20°.
   Standing is unchanged.
+- **Standing trims all zero.** The original shipped with trims on six servos (RF coxa −120 and
+  femur −200, RM femur −110 and tibia +120, RR femur −210, LR coxa +110), so standing left those
+  servos off 1500 and the legs unevenly spaced. Now Stand puts every servo at 1500.
 - **Self-update** from this repo's releases.
 
 ## Wiring (unchanged)
