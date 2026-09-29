@@ -789,23 +789,23 @@
     .end local v2    # "result$iv":Ljava/util/LinkedHashMap;
     .end local v18    # "$this$associateWith$iv":Ljava/lang/Iterable;
     # Standing position calibrated by hand on the robot: trim = stand pulse - 1500.
-    # RF 2090/1180/1500, RM 2500/1180/1500, RR 2350/1200/1500,
-    # LR 1470/1730/1500, LM 1420/1740/1500, LF 1690/1640/1500.
+    # RF 1360/1160/1550, RM 1880/1160/1500, RR 1290/1200/1500,
+    # LR 1850/1730/1500, LM 1460/1740/1500, LF 1680/1620/1500.
     const/4 v1, 0x6
     new-array v1, v1, [Lkotlin/Pair;
     const/4 v2, 0x3
     new-array v3, v2, [Ljava/lang/Integer;
-    const/16 v6, 590
+    const/16 v6, -140
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     move-result-object v6
     const/4 v7, 0
     aput-object v6, v3, v7
-    const/16 v6, -320
+    const/16 v6, -340
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     move-result-object v6
     const/4 v7, 1
     aput-object v6, v3, v7
-    const/16 v6, 0
+    const/16 v6, 50
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     move-result-object v6
     const/4 v7, 2
@@ -819,12 +819,12 @@
     aput-object v3, v1, v7
     const/4 v2, 0x3
     new-array v3, v2, [Ljava/lang/Integer;
-    const/16 v6, 1000
+    const/16 v6, 380
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     move-result-object v6
     const/4 v7, 0
     aput-object v6, v3, v7
-    const/16 v6, -320
+    const/16 v6, -340
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     move-result-object v6
     const/4 v7, 1
@@ -843,7 +843,7 @@
     aput-object v3, v1, v7
     const/4 v2, 0x3
     new-array v3, v2, [Ljava/lang/Integer;
-    const/16 v6, 850
+    const/16 v6, -210
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     move-result-object v6
     const/4 v7, 0
@@ -867,7 +867,7 @@
     aput-object v3, v1, v7
     const/4 v2, 0x3
     new-array v3, v2, [Ljava/lang/Integer;
-    const/16 v6, -30
+    const/16 v6, 350
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     move-result-object v6
     const/4 v7, 0
@@ -891,7 +891,7 @@
     aput-object v3, v1, v7
     const/4 v2, 0x3
     new-array v3, v2, [Ljava/lang/Integer;
-    const/16 v6, -80
+    const/16 v6, -40
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     move-result-object v6
     const/4 v7, 0
@@ -915,12 +915,12 @@
     aput-object v3, v1, v7
     const/4 v2, 0x3
     new-array v3, v2, [Ljava/lang/Integer;
-    const/16 v6, 190
+    const/16 v6, 180
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     move-result-object v6
     const/4 v7, 0
     aput-object v6, v3, v7
-    const/16 v6, 140
+    const/16 v6, 120
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     move-result-object v6
     const/4 v7, 1

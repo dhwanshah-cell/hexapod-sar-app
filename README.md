@@ -35,15 +35,14 @@ Edits go straight into `app/`, and the build packs it back up.
 
   | Leg | Coxa | Femur | Tibia |
   |---|---|---|---|
-  | RF S1/2/3 | 2090 | 1180 | 1500 |
-  | RM S4/5/6 | 2500 | 1180 | 1500 |
-  | RR S7/8/9 | 2350 | 1200 | 1500 |
-  | LR S10/11/12 | 1470 | 1730 | 1500 |
-  | LM S13/14/15 | 1420 | 1740 | 1500 |
-  | LF S16/17/18 | 1690 | 1640 | 1500 |
+  | RF S1/2/3 | 1360 | 1160 | 1550 |
+  | RM S4/5/6 | 1880 | 1160 | 1500 |
+  | RR S7/8/9 | 1290 | 1200 | 1500 |
+  | LR S10/11/12 | 1850 | 1730 | 1500 |
+  | LM S13/14/15 | 1460 | 1740 | 1500 |
+  | LF S16/17/18 | 1680 | 1620 | 1500 |
 
-  Walking moves each joint relative to this pose. RM coxa sits at the 2500 limit, so its
-  forward swing is cut short while walking.
+  Walking moves each joint relative to this pose and stays within 500–2500 on every joint.
 - **Trim limit ±1000** (was ±300), so the trim buttons don't snap these values.
 - **Self-update** from this repo's releases.
 
