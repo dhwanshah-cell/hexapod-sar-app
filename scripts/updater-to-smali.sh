@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Recompile updater/Updater.java into src/smali_classes3 after editing it.
+# Recompile updater/Updater.java into app/smali_classes3 after editing it.
 set -euo pipefail
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 SDK=${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/opt/android-sdk}}
@@ -12,6 +12,6 @@ mkdir -p "$T/dex"
 (cd "$T/dex" && zip -q ../u.apk classes.dex)
 APKTOOL=${APKTOOL:-$ROOT/build/apktool-2.10.0.jar}
 java -jar "$APKTOOL" d -r -f -o "$T/smali" "$T/u.apk"
-rm -f "$ROOT"/src/smali_classes3/com/dhwan/hexapodsar/Updater*.smali
-cp "$T"/smali/smali/com/dhwan/hexapodsar/Updater*.smali "$ROOT/src/smali_classes3/com/dhwan/hexapodsar/"
+rm -f "$ROOT"/app/smali_classes3/com/dhwan/hexapodsar/Updater*.smali
+cp "$T"/smali/smali/com/dhwan/hexapodsar/Updater*.smali "$ROOT/app/smali_classes3/com/dhwan/hexapodsar/"
 rm -rf "$T"

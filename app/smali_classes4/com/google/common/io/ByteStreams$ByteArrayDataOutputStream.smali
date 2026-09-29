@@ -1,0 +1,497 @@
+.class Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;
+.super Ljava/lang/Object;
+.source "ByteStreams.java"
+
+# interfaces
+.implements Lcom/google/common/io/ByteArrayDataOutput;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/common/io/ByteStreams;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0xa
+    name = "ByteArrayDataOutputStream"
+.end annotation
+
+
+# instance fields
+.field final byteArrayOutputSteam:Ljava/io/ByteArrayOutputStream;
+
+.field final output:Ljava/io/DataOutput;
+
+
+# direct methods
+.method constructor <init>(Ljava/io/ByteArrayOutputStream;)V
+    .locals 1
+    .param p1, "byteArrayOutputSteam"    # Ljava/io/ByteArrayOutputStream;
+
+    .line 497
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 498
+    iput-object p1, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->byteArrayOutputSteam:Ljava/io/ByteArrayOutputStream;
+
+    .line 499
+    new-instance v0, Ljava/io/DataOutputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    iput-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    .line 500
+    return-void
+.end method
+
+
+# virtual methods
+.method public toByteArray()[B
+    .locals 1
+
+    .line 630
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->byteArrayOutputSteam:Ljava/io/ByteArrayOutputStream;
+
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public write(I)V
+    .locals 2
+    .param p1, "b"    # I
+
+    .line 505
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->write(I)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 508
+    nop
+
+    .line 509
+    return-void
+
+    .line 506
+    :catch_0
+    move-exception v0
+
+    .line 507
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public write([B)V
+    .locals 2
+    .param p1, "b"    # [B
+
+    .line 514
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->write([B)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 517
+    nop
+
+    .line 518
+    return-void
+
+    .line 515
+    :catch_0
+    move-exception v0
+
+    .line 516
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public write([BII)V
+    .locals 2
+    .param p1, "b"    # [B
+    .param p2, "off"    # I
+    .param p3, "len"    # I
+
+    .line 523
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1, p2, p3}, Ljava/io/DataOutput;->write([BII)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 526
+    nop
+
+    .line 527
+    return-void
+
+    .line 524
+    :catch_0
+    move-exception v0
+
+    .line 525
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeBoolean(Z)V
+    .locals 2
+    .param p1, "v"    # Z
+
+    .line 532
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->writeBoolean(Z)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 535
+    nop
+
+    .line 536
+    return-void
+
+    .line 533
+    :catch_0
+    move-exception v0
+
+    .line 534
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeByte(I)V
+    .locals 2
+    .param p1, "v"    # I
+
+    .line 541
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->writeByte(I)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 544
+    nop
+
+    .line 545
+    return-void
+
+    .line 542
+    :catch_0
+    move-exception v0
+
+    .line 543
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeBytes(Ljava/lang/String;)V
+    .locals 2
+    .param p1, "s"    # Ljava/lang/String;
+
+    .line 550
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->writeBytes(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 553
+    nop
+
+    .line 554
+    return-void
+
+    .line 551
+    :catch_0
+    move-exception v0
+
+    .line 552
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeChar(I)V
+    .locals 2
+    .param p1, "v"    # I
+
+    .line 559
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->writeChar(I)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 562
+    nop
+
+    .line 563
+    return-void
+
+    .line 560
+    :catch_0
+    move-exception v0
+
+    .line 561
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeChars(Ljava/lang/String;)V
+    .locals 2
+    .param p1, "s"    # Ljava/lang/String;
+
+    .line 568
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->writeChars(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 571
+    nop
+
+    .line 572
+    return-void
+
+    .line 569
+    :catch_0
+    move-exception v0
+
+    .line 570
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeDouble(D)V
+    .locals 2
+    .param p1, "v"    # D
+
+    .line 577
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1, p2}, Ljava/io/DataOutput;->writeDouble(D)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 580
+    nop
+
+    .line 581
+    return-void
+
+    .line 578
+    :catch_0
+    move-exception v0
+
+    .line 579
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeFloat(F)V
+    .locals 2
+    .param p1, "v"    # F
+
+    .line 586
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->writeFloat(F)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 589
+    nop
+
+    .line 590
+    return-void
+
+    .line 587
+    :catch_0
+    move-exception v0
+
+    .line 588
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeInt(I)V
+    .locals 2
+    .param p1, "v"    # I
+
+    .line 595
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->writeInt(I)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 598
+    nop
+
+    .line 599
+    return-void
+
+    .line 596
+    :catch_0
+    move-exception v0
+
+    .line 597
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeLong(J)V
+    .locals 2
+    .param p1, "v"    # J
+
+    .line 604
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1, p2}, Ljava/io/DataOutput;->writeLong(J)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 607
+    nop
+
+    .line 608
+    return-void
+
+    .line 605
+    :catch_0
+    move-exception v0
+
+    .line 606
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeShort(I)V
+    .locals 2
+    .param p1, "v"    # I
+
+    .line 613
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->writeShort(I)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 616
+    nop
+
+    .line 617
+    return-void
+
+    .line 614
+    :catch_0
+    move-exception v0
+
+    .line 615
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method
+
+.method public writeUTF(Ljava/lang/String;)V
+    .locals 2
+    .param p1, "s"    # Ljava/lang/String;
+
+    .line 622
+    :try_start_0
+    iget-object v0, p0, Lcom/google/common/io/ByteStreams$ByteArrayDataOutputStream;->output:Ljava/io/DataOutput;
+
+    invoke-interface {v0, p1}, Ljava/io/DataOutput;->writeUTF(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 625
+    nop
+
+    .line 626
+    return-void
+
+    .line 623
+    :catch_0
+    move-exception v0
+
+    .line 624
+    .local v0, "impossible":Ljava/io/IOException;
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+.end method

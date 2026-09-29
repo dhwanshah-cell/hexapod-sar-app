@@ -1,0 +1,217 @@
+.class final Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;
+.super Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesMultimap;
+.source "$Multimaps.java"
+
+# interfaces
+.implements Lautovalue/shaded/com/google$/common/collect/$ListMultimap;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lautovalue/shaded/com/google$/common/collect/$Multimaps;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1a
+    name = "TransformedEntriesListMultimap"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V1:",
+        "Ljava/lang/Object;",
+        "V2:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesMultimap<",
+        "TK;TV1;TV2;>;",
+        "Lautovalue/shaded/com/google$/common/collect/$ListMultimap<",
+        "TK;TV2;>;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Lautovalue/shaded/com/google$/common/collect/$ListMultimap;Lautovalue/shaded/com/google$/common/collect/$Maps$EntryTransformer;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lautovalue/shaded/com/google$/common/collect/$ListMultimap<",
+            "TK;TV1;>;",
+            "Lautovalue/shaded/com/google$/common/collect/$Maps$EntryTransformer<",
+            "-TK;-TV1;TV2;>;)V"
+        }
+    .end annotation
+
+    .line 1548
+    .local p0, "this":Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;, "Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap<TK;TV1;TV2;>;"
+    .local p1, "fromMultimap":Lautovalue/shaded/com/google$/common/collect/$ListMultimap;, "Lautovalue/shaded/com/google$/common/collect/$ListMultimap<TK;TV1;>;"
+    .local p2, "transformer":Lautovalue/shaded/com/google$/common/collect/$Maps$EntryTransformer;, "Lautovalue/shaded/com/google$/common/collect/$Maps$EntryTransformer<-TK;-TV1;TV2;>;"
+    invoke-direct {p0, p1, p2}, Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesMultimap;-><init>(Lautovalue/shaded/com/google$/common/collect/$Multimap;Lautovalue/shaded/com/google$/common/collect/$Maps$EntryTransformer;)V
+
+    .line 1549
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic get(Ljava/lang/Object;)Ljava/util/Collection;
+    .locals 0
+
+    .line 1543
+    .local p0, "this":Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;, "Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap<TK;TV1;TV2;>;"
+    invoke-virtual {p0, p1}, Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;->get(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public get(Ljava/lang/Object;)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;)",
+            "Ljava/util/List<",
+            "TV2;>;"
+        }
+    .end annotation
+
+    .line 1558
+    .local p0, "this":Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;, "Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap<TK;TV1;TV2;>;"
+    .local p1, "key":Ljava/lang/Object;, "TK;"
+    iget-object v0, p0, Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;->fromMultimap:Lautovalue/shaded/com/google$/common/collect/$Multimap;
+
+    invoke-interface {v0, p1}, Lautovalue/shaded/com/google$/common/collect/$Multimap;->get(Ljava/lang/Object;)Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;->transform(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic removeAll(Ljava/lang/Object;)Ljava/util/Collection;
+    .locals 0
+
+    .line 1543
+    .local p0, "this":Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;, "Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap<TK;TV1;TV2;>;"
+    invoke-virtual {p0, p1}, Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;->removeAll(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public removeAll(Ljava/lang/Object;)Ljava/util/List;
+    .locals 1
+    .param p1, "key"    # Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            ")",
+            "Ljava/util/List<",
+            "TV2;>;"
+        }
+    .end annotation
+
+    .line 1564
+    .local p0, "this":Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;, "Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap<TK;TV1;TV2;>;"
+    iget-object v0, p0, Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;->fromMultimap:Lautovalue/shaded/com/google$/common/collect/$Multimap;
+
+    invoke-interface {v0, p1}, Lautovalue/shaded/com/google$/common/collect/$Multimap;->removeAll(Ljava/lang/Object;)Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;->transform(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/Collection;
+    .locals 0
+
+    .line 1543
+    .local p0, "this":Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;, "Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap<TK;TV1;TV2;>;"
+    invoke-virtual {p0, p1, p2}, Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;->replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public replaceValues(Ljava/lang/Object;Ljava/lang/Iterable;)Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;",
+            "Ljava/lang/Iterable<",
+            "+TV2;>;)",
+            "Ljava/util/List<",
+            "TV2;>;"
+        }
+    .end annotation
+
+    .line 1569
+    .local p0, "this":Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;, "Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap<TK;TV1;TV2;>;"
+    .local p1, "key":Ljava/lang/Object;, "TK;"
+    .local p2, "values":Ljava/lang/Iterable;, "Ljava/lang/Iterable<+TV2;>;"
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method bridge synthetic transform(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/Collection;
+    .locals 0
+
+    .line 1543
+    .local p0, "this":Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;, "Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap<TK;TV1;TV2;>;"
+    invoke-virtual {p0, p1, p2}, Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;->transform(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method transform(Ljava/lang/Object;Ljava/util/Collection;)Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TK;",
+            "Ljava/util/Collection<",
+            "TV1;>;)",
+            "Ljava/util/List<",
+            "TV2;>;"
+        }
+    .end annotation
+
+    .line 1553
+    .local p0, "this":Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;, "Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap<TK;TV1;TV2;>;"
+    .local p1, "key":Ljava/lang/Object;, "TK;"
+    .local p2, "values":Ljava/util/Collection;, "Ljava/util/Collection<TV1;>;"
+    move-object v0, p2
+
+    check-cast v0, Ljava/util/List;
+
+    iget-object v1, p0, Lautovalue/shaded/com/google$/common/collect/$Multimaps$TransformedEntriesListMultimap;->transformer:Lautovalue/shaded/com/google$/common/collect/$Maps$EntryTransformer;
+
+    invoke-static {v1, p1}, Lautovalue/shaded/com/google$/common/collect/$Maps;->asValueToValueFunction(Lautovalue/shaded/com/google$/common/collect/$Maps$EntryTransformer;Ljava/lang/Object;)Lautovalue/shaded/com/google$/common/base/$Function;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lautovalue/shaded/com/google$/common/collect/$Lists;->transform(Ljava/util/List;Lautovalue/shaded/com/google$/common/base/$Function;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build the app: unpack the base APK, lay src/ over it, set the version, repack, sign.
+# Build the app from app/ (the full unpacked source): set the version, pack, align, sign.
 #   scripts/build.sh <versionCode> <versionName>   ->  build/hexapod-sar.apk
 set -euo pipefail
 CODE=${1:?versionCode}
@@ -16,8 +16,7 @@ mkdir -p "$WORK"
 [ -f "$APKTOOL" ] || curl -sSL -o "$APKTOOL" \
   "https://github.com/iBotPeaches/Apktool/releases/download/v$APKTOOL_VERSION/apktool_$APKTOOL_VERSION.jar"
 
-java -jar "$APKTOOL" d -f -o "$WORK/app" "$ROOT/base/hexapodsar-base.apk"
-cp -r "$ROOT/src/." "$WORK/app/"
+cp -r "$ROOT/app" "$WORK/app"
 sed -i "s/^  versionCode: .*/  versionCode: $CODE/; s/^  versionName: .*/  versionName: $NAME/" "$WORK/app/apktool.yml"
 
 java -jar "$APKTOOL" b -o "$WORK/unsigned.apk" "$WORK/app"

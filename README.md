@@ -9,19 +9,20 @@ Android asks you to confirm the install.
 
 ## How the repo is laid out
 
-The app's original source isn't available, so the repo keeps the original build and only
-the files that change:
+The app's original Kotlin source isn't available, so `app/` holds the complete app unpacked
+from its APK with apktool: all code (as smali), resources, models and native libraries.
+Edits go straight into `app/`, and the build packs it back up.
 
 | Path | What it is |
 |---|---|
-| `base/hexapodsar-base.apk` | The original app (v0.1.27), unchanged. |
-| `src/` | Files laid over the unpacked base before repacking (apktool layout). |
-| `src/smali_classes3/com/dhwan/hexapodsar/Gait.smali` | Walking. Changed: centred stride. |
-| `src/smali_classes3/com/dhwan/hexapodsar/MainActivity.smali` | Calls the update check on start. |
-| `src/smali_classes3/com/dhwan/hexapodsar/Updater*.smali` | Compiled from `updater/Updater.java`. |
-| `src/AndroidManifest.xml` | Adds the install-updates permission. |
+| `app/` | The full app source (apktool project). This is what gets built. |
+| `app/smali_classes3/com/dhwan/hexapodsar/` | The app's own code: `Gait.smali` (walking), `MainActivity.smali`, `UscLink.smali` (USB), `Calibration.smali`, … |
+| `app/assets/` | Person detector and sound classifier models. |
+| `reference-java/` | The app's own code decompiled to Java, for reading. Not built. |
+| `updater/Updater.java` | Source of the self-update code; `scripts/updater-to-smali.sh` compiles it into `app/`. |
+| `original/` | The original APK (v0.1.27), unchanged, for reference. |
 | `signing/hexapod.keystore` | Signing key. Every build uses it so updates install over each other. |
-| `scripts/build.sh` | `scripts/build.sh <versionCode> <versionName>` → `build/hexapod-sar.apk` |
+| `scripts/build.sh` | `scripts/build.sh <versionCode> <versionName>` → `build/hexapod-sar.apk` (needs Java 17, Android build-tools). |
 
 ## Changes from the original
 

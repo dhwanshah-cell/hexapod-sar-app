@@ -1,0 +1,49 @@
+.class public final Landroidx/vectordrawable/animated/R$attr;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/vectordrawable/animated/R;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "attr"
+.end annotation
+
+
+# static fields
+.field public static alpha:I = 0x7f020027
+
+.field public static font:I = 0x7f02007b
+
+.field public static fontProviderAuthority:I = 0x7f02007d
+
+.field public static fontProviderCerts:I = 0x7f02007e
+
+.field public static fontProviderFetchStrategy:I = 0x7f02007f
+
+.field public static fontProviderFetchTimeout:I = 0x7f020080
+
+.field public static fontProviderPackage:I = 0x7f020081
+
+.field public static fontProviderQuery:I = 0x7f020082
+
+.field public static fontStyle:I = 0x7f020084
+
+.field public static fontVariationSettings:I = 0x7f020085
+
+.field public static fontWeight:I = 0x7f020086
+
+.field public static ttcIndex:I = 0x7f020110
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
