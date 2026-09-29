@@ -788,133 +788,159 @@
     .end local v1    # "$i$f$associateWith":I
     .end local v2    # "result$iv":Ljava/util/LinkedHashMap;
     .end local v18    # "$this$associateWith$iv":Ljava/lang/Iterable;
-    const/4 v1, 0x4
-
+    # Standing position calibrated by hand on the robot: trim = stand pulse - 1500.
+    # RF 2090/1180/1500, RM 2500/1180/1500, RR 2350/1200/1500,
+    # LR 1470/1730/1500, LM 1420/1740/1500, LF 1690/1640/1500.
+    const/4 v1, 0x6
     new-array v1, v1, [Lkotlin/Pair;
-
     const/4 v2, 0x3
-
     new-array v3, v2, [Ljava/lang/Integer;
-
-    const/16 v7, 0x0
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    aput-object v7, v3, v4
-
-    const/16 v7, 0x0
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const/4 v8, 0x1
-
-    aput-object v7, v3, v8
-
-    const/4 v7, 0x2
-
-    aput-object v5, v3, v7
-
-    invoke-static {v3}, Lkotlin/collections/CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-static {v6, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
-
-    move-result-object v3
-
-    aput-object v3, v1, v4
-
-    new-array v3, v2, [Ljava/lang/Integer;
-
-    aput-object v5, v3, v4
-
-    const/16 v6, 0x0
-
+    const/16 v6, 590
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
     move-result-object v6
-
-    aput-object v6, v3, v8
-
-    const/16 v6, 0x0
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
+    const/4 v7, 0
     aput-object v6, v3, v7
-
-    invoke-static {v3}, Lkotlin/collections/CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-static {v9, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
-
-    move-result-object v3
-
-    aput-object v3, v1, v8
-
-    new-array v3, v2, [Ljava/lang/Integer;
-
-    aput-object v5, v3, v4
-
-    const/16 v6, 0x0
-
+    const/16 v6, -320
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
     move-result-object v6
-
-    aput-object v6, v3, v8
-
-    aput-object v5, v3, v7
-
+    const/4 v7, 1
+    aput-object v6, v3, v7
+    const/16 v6, 0
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 2
+    aput-object v6, v3, v7
     invoke-static {v3}, Lkotlin/collections/CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
-
     move-result-object v3
-
-    invoke-static {v11, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
-
+    const-string v6, "RF"
+    invoke-static {v6, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
     move-result-object v3
-
+    const/4 v7, 0
     aput-object v3, v1, v7
-
+    const/4 v2, 0x3
     new-array v3, v2, [Ljava/lang/Integer;
-
-    const/16 v6, 0x0
-
+    const/16 v6, 1000
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
     move-result-object v6
-
-    aput-object v6, v3, v4
-
-    aput-object v5, v3, v8
-
-    aput-object v5, v3, v7
-
+    const/4 v7, 0
+    aput-object v6, v3, v7
+    const/16 v6, -320
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 1
+    aput-object v6, v3, v7
+    const/16 v6, 0
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 2
+    aput-object v6, v3, v7
     invoke-static {v3}, Lkotlin/collections/CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
-
     move-result-object v3
-
-    invoke-static {v13, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
-
+    const-string v6, "RM"
+    invoke-static {v6, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
     move-result-object v3
-
-    aput-object v3, v1, v2
-
-    .line 62
+    const/4 v7, 1
+    aput-object v3, v1, v7
+    const/4 v2, 0x3
+    new-array v3, v2, [Ljava/lang/Integer;
+    const/16 v6, 850
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 0
+    aput-object v6, v3, v7
+    const/16 v6, -300
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 1
+    aput-object v6, v3, v7
+    const/16 v6, 0
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 2
+    aput-object v6, v3, v7
+    invoke-static {v3}, Lkotlin/collections/CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
+    move-result-object v3
+    const-string v6, "RR"
+    invoke-static {v6, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    move-result-object v3
+    const/4 v7, 2
+    aput-object v3, v1, v7
+    const/4 v2, 0x3
+    new-array v3, v2, [Ljava/lang/Integer;
+    const/16 v6, -30
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 0
+    aput-object v6, v3, v7
+    const/16 v6, 230
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 1
+    aput-object v6, v3, v7
+    const/16 v6, 0
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 2
+    aput-object v6, v3, v7
+    invoke-static {v3}, Lkotlin/collections/CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
+    move-result-object v3
+    const-string v6, "LR"
+    invoke-static {v6, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    move-result-object v3
+    const/4 v7, 3
+    aput-object v3, v1, v7
+    const/4 v2, 0x3
+    new-array v3, v2, [Ljava/lang/Integer;
+    const/16 v6, -80
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 0
+    aput-object v6, v3, v7
+    const/16 v6, 240
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 1
+    aput-object v6, v3, v7
+    const/16 v6, 0
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 2
+    aput-object v6, v3, v7
+    invoke-static {v3}, Lkotlin/collections/CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
+    move-result-object v3
+    const-string v6, "LM"
+    invoke-static {v6, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    move-result-object v3
+    const/4 v7, 4
+    aput-object v3, v1, v7
+    const/4 v2, 0x3
+    new-array v3, v2, [Ljava/lang/Integer;
+    const/16 v6, 190
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 0
+    aput-object v6, v3, v7
+    const/16 v6, 140
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 1
+    aput-object v6, v3, v7
+    const/16 v6, 0
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
+    const/4 v7, 2
+    aput-object v6, v3, v7
+    invoke-static {v3}, Lkotlin/collections/CollectionsKt;->listOf([Ljava/lang/Object;)Ljava/util/List;
+    move-result-object v3
+    const-string v6, "LF"
+    invoke-static {v6, v3}, Lkotlin/TuplesKt;->to(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    move-result-object v3
+    const/4 v7, 5
+    aput-object v3, v1, v7
     invoke-static {v1}, Lkotlin/collections/MapsKt;->mapOf([Lkotlin/Pair;)Ljava/util/Map;
-
     move-result-object v1
-
     invoke-static {v0, v1}, Lkotlin/collections/MapsKt;->plus(Ljava/util/Map;Ljava/util/Map;)Ljava/util/Map;
-
     move-result-object v0
-
     sput-object v0, Lcom/dhwan/hexapodsar/Calibration;->DEFAULT_TRIM:Ljava/util/Map;
 
     return-void

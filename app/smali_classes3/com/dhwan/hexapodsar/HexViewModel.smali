@@ -3517,7 +3517,7 @@
     move-object v4, v0
 
     :goto_0
-    const/16 v7, 0x12c
+    const/16 v7, 0x3e8
 
     if-eqz p5, :cond_2
 
@@ -3525,7 +3525,7 @@
 
     move-result v2
 
-    const/16 v3, -0x12c
+    const/16 v3, -0x3e8
 
     invoke-static {v2, v3, v7}, Lkotlin/ranges/RangesKt;->coerceIn(III)I
 

@@ -30,9 +30,21 @@ Edits go straight into `app/`, and the build packs it back up.
   stride ahead, instead of from the standing spot to a full stride ahead. Same 60 mm stride
   and speed; the largest coxa swing drops from 30° to 15° and tibia from 43° to 20°.
   Standing is unchanged.
-- **Standing trims all zero.** The original shipped with trims on six servos (RF coxa −120 and
-  femur −200, RM femur −110 and tibia +120, RR femur −210, LR coxa +110), so standing left those
-  servos off 1500 and the legs unevenly spaced. Now Stand puts every servo at 1500.
+- **Calibrated standing position.** Stand (and Reset defaults) puts the servos at the pulses
+  found by hand on the robot. Built in as default trims (pulse − 1500):
+
+  | Leg | Coxa | Femur | Tibia |
+  |---|---|---|---|
+  | RF S1/2/3 | 2090 | 1180 | 1500 |
+  | RM S4/5/6 | 2500 | 1180 | 1500 |
+  | RR S7/8/9 | 2350 | 1200 | 1500 |
+  | LR S10/11/12 | 1470 | 1730 | 1500 |
+  | LM S13/14/15 | 1420 | 1740 | 1500 |
+  | LF S16/17/18 | 1690 | 1640 | 1500 |
+
+  Walking moves each joint relative to this pose. RM coxa sits at the 2500 limit, so its
+  forward swing is cut short while walking.
+- **Trim limit ±1000** (was ±300), so the trim buttons don't snap these values.
 - **Self-update** from this repo's releases.
 
 ## Wiring (unchanged)
